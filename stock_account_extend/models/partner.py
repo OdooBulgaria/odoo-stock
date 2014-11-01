@@ -18,7 +18,6 @@
 #    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
 ###############################################################################
-
 from openerp import models, fields, api
 
 
@@ -31,6 +30,7 @@ class Partner(models.Model):
 
     @api.one
     def compute_picking_to_invoice(self):
+        picking_ob = self.env['stock.picking']
         self.picking_to_invoice = 0
-        for picking in self.env['stock.picking'].search([('partner_id', '=', self.id)]):
+        for picking in picking_ob.search([('partner_id', '=', self.id)]):
             self.picking_to_invoice += picking.invoice_total

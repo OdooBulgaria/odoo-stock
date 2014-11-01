@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-##############################################################################
+###############################################################################
 #
 #    Trey, Kilobytes de Soluciones
 #    Copyright (C) 2014-Today Trey, Kilobytes de Soluciones <www.trey.es>
@@ -17,7 +17,7 @@
 #    You should have received a copy of the GNU Affero General Public License
 #    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
-##############################################################################
+###############################################################################
 
 {
     'name': 'Albaranes a facturar, más información',
@@ -25,14 +25,13 @@
     'summary': 'Extiende la funcionalidad de los albaranes a facturar',
     'version': '0.1',
     'description': """
-En la ficha del cliente se muestra un indicador con los albaranes penedientes de
-facturar y el importe del total.
-Añade una columna con el importe de la factura a crear en el listado de albaranes a facturar.
+En la ficha del cliente se muestra un indicador con los albaranes penedientes
+de facturar y el importe del total. Añade una columna con el importe de la
+factura a crear en el listado de albaranes a facturar.
     """,
     'author': 'Trey',
     'depends': ['base', 'stock_account'],
     'data': [
-        #'security/ir.model.access.csv',
         'views/partner.xml',
         'views/stock.xml',
     ],
